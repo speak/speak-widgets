@@ -9,7 +9,7 @@
     "compile": "node babel src --out-dir lib",
     "build": "npm run clean && npm run compile && npm run assets"
   },
-  "main": "lib/index.js",
+  "main": "src/index.js",
   "author": {
     "name": "Tom Moor",
     "email": "tom@speak.io"
@@ -25,6 +25,9 @@
       "<rootDir>/node_modules"
     ]
   },
+  "browserify": {
+    "transform": ["babelify"]
+  },
   "devDependencies": {
     "grunt": "~0.4.5",
     "grunt-babel": "^4.0.0",
@@ -36,6 +39,6 @@
   },
   "dependencies": {
     "jquery": "^2.1.4",
-    "react": "^0.12.2"
+    "react": "^0.13.3"
   }
 }
