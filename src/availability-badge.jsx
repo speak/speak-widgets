@@ -1,4 +1,5 @@
-var React = require('react/addons');
+var React = require('react');
+var classNames = require('classnames');
 
 var AvailabilityBadge = React.createClass({ 
   getDefaultProps: function() {
@@ -25,13 +26,12 @@ var AvailabilityBadge = React.createClass({
     var user = this.props.user;
     var offline = this.isOffline();
     
-    var cx = React.addons.classSet;
-    var classes = cx({
+    var classes = classNames({
       'availability': true,
       'idle': (offline || user.last_idle_at)
     });
 
-    var availability_classes = cx({
+    var availability_classes = classNames({
       'icon-circle': !offline && user.instant && !user.manual_offline && user.online,
       'icon-half-circle': !offline && !user.instant && !user.manual_offline,
       'icon-empty-circle': offline

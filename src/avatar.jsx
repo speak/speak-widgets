@@ -1,4 +1,5 @@
-var React = require('react/addons');
+var React = require('react');
+var classNames = require('classnames');
 var AvailabilityBadge = require('./availability-badge');
 var $ = require('jquery');
 
@@ -82,8 +83,7 @@ var Avatar = React.createClass({
     var gravatar, initials, placeholder, missed_calls_badge, muted_badge, availability;
 
     var hidden = {display: "none"};
-    var cx = React.addons.classSet;
-    var classes = cx({
+    var classes = classNames({
       'avatar': true,
       'animated': this.props.animated,
       'speaking': item.speaking && !item.muted,
