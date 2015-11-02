@@ -41,12 +41,12 @@ var Avatar = React.createClass({
   },
   
   showPlaceholder: function(ev) {
-    this.showImage(this.refs.placeholder.getDOMNode());
+    this.showImage(this.refs.placeholder);
     this.setState({gravatar_hidden: true});
   },
   
   avatarLoaded: function(ev) {
-    this.showImage(this.refs.avatar.getDOMNode());
+    this.showImage(this.refs.avatar);
     this.setState({gravatar_hidden: false});
   },
   
