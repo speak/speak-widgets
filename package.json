@@ -1,0 +1,22 @@
+{
+  "name": "speak-widgets",
+  "version": "0.0.1",
+  "description": "Speak client UI widgets",
+  "scripts": {
+    "test": "jest"
+  },
+  "jest": {
+    "scriptPreprocessor": "<rootDir>/support/preprocessor.js",
+    "testPathIgnorePatterns": [
+      "<rootDir>/node_modules"
+    ]
+  },
+  "devDependencies": {
+    "jest-cli": "^0.2.1",
+    "react-tools": "*"
+  },
+  "dependencies": {
+    "jquery": "^2.1.4",
+    "react": "^0.12.2"
+  }
+}
