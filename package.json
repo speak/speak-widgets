@@ -9,7 +9,7 @@
     "compile": "node babel src --out-dir lib",
     "build": "npm run clean && npm run compile && npm run assets"
   },
-  "main": "src/index.js",
+  "main": "lib/index.js",
   "author": {
     "name": "Tom Moor",
     "email": "tom@speak.io"
@@ -35,10 +35,10 @@
     "grunt-contrib-less": "~0.10.0",
     "load-grunt-config": "^0.19.0",
     "jest-cli": "^0.2.1",
+    "react": "^0.13.3",
     "react-tools": "*"
   },
   "dependencies": {
-    "jquery": "^2.1.4",
-    "react": "^0.13.3"
+    "jquery": "^2.1.4"
   }
 }
