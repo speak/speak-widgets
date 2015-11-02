@@ -25,9 +25,6 @@
       "<rootDir>/node_modules"
     ]
   },
-  "browserify": {
-    "transform": ["babelify"]
-  },
   "devDependencies": {
     "grunt": "~0.4.5",
     "grunt-babel": "^4.0.0",
