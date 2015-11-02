@@ -3,7 +3,21 @@
   "version": "0.0.1",
   "description": "Speak client UI widgets",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "assets": "cpy src/less/* lib/less/",
+    "clean": "rimraf ./lib/*",
+    "compile": "node babel src --out-dir lib",
+    "build": "npm run clean && npm run compile && npm run assets"
+  },
+  "main": "lib/index.js",
+  "author": {
+    "name": "Tom Moor",
+    "email": "tom@speak.io"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/speak/speak-widgets"
   },
   "jest": {
     "scriptPreprocessor": "<rootDir>/support/preprocessor.js",
@@ -12,6 +26,11 @@
     ]
   },
   "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-babel": "^4.0.0",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-less": "~0.10.0",
+    "load-grunt-config": "^0.19.0",
     "jest-cli": "^0.2.1",
     "react-tools": "*"
   },
