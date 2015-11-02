@@ -25,6 +25,9 @@
       "<rootDir>/node_modules"
     ]
   },
+  "peerDependencies": {
+    "react": "^0.13.3",
+  },
   "devDependencies": {
     "grunt": "~0.4.5",
     "grunt-babel": "^4.0.0",
