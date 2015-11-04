@@ -110,4 +110,159 @@
     A set of useful LESS mixins
     More info at: http://lesselements.com
   ---------------------------------------------------*/
+li.call-control {
+  padding: 0 5px;
+  list-style: none;
+  display: inline-block;
+  box-sizing: border-box;
+  text-align: center;
+  width: 20%;
+  height: 100%;
+}
+li.call-control .tooltip {
+  transform: translateX(-50%);
+  position: relative;
+  top: -2px;
+  left: 20px;
+  background: #fff;
+  padding: 10px;
+  font-size: 12px;
+  line-height: 1;
+  min-height: 0;
+  display: none;
+  white-space: nowrap;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+li.call-control .tooltip .triangle {
+  display: block;
+  width: 10px;
+  height: 17px;
+  position: absolute;
+  overflow: hidden;
+  top: -12px;
+  left: 50%;
+  margin-left: -6px;
+  background: url('../images/tooltip-arrow.png');
+  background-size: 10px 17px;
+  background-repeat: no-repeat;
+  background-position: center right;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+li.call-control a {
+  -webkit-app-region: no-drag;
+  background-color: transparent;
+  background-size: 20px 20px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 35px;
+  height: 100%;
+  cursor: default;
+  display: inline-block;
+  -moz-opacity: 0.8;
+  -khtml-opacity: 0.8;
+  -webkit-opacity: 0.8;
+  opacity: 0.8;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=80);
+  filter: alpha(opacity=80);
+}
+li.call-control a.disabled {
+  -moz-opacity: 0.5;
+  -khtml-opacity: 0.5;
+  -webkit-opacity: 0.5;
+  opacity: 0.5;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=50);
+  filter: alpha(opacity=50);
+}
+li.call-control a.mute {
+  background-image: url('../images/icons/toolbar-icon-mute.png');
+}
+li.call-control a.mute.muted {
+  background-image: url('../images/icons/toolbar-icon-mute-enabled.png');
+}
+li.call-control a.video {
+  background-image: url('../images/icons/toolbar-icon-video.png');
+}
+li.call-control a.video.enabled {
+  background-image: url('../images/icons/toolbar-icon-video-enabled.png');
+}
+li.call-control a.add-people {
+  background-image: url('../images/icons/toolbar-add-person@2x.png');
+}
+li.call-control a.add-people.enabled {
+  background-image: url('../images/icons/toolbar-add-person-enabled@2x.png');
+}
+li.call-control a.screen {
+  background-image: url('../images/icons/toolbar-icon-screen@2x.png');
+}
+li.call-control a.screen.enabled {
+  background-image: url('../images/icons/toolbar-icon-screen-enabled@2x.png');
+}
+li.call-control a.leave {
+  background-image: url('../images/icons/toolbar-icon-leave.png');
+}
+li.call-control a.accept {
+  background-image: url('../images/icons/toolbar-icon-accept.png');
+}
+li.call-control:hover {
+  background: #000;
+}
+li.call-control:hover a {
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+  transition: transform 100ms ease-in-out;
+}
+li.call-control:hover a:not(.disabled) {
+  -moz-opacity: 1;
+  -khtml-opacity: 1;
+  -webkit-opacity: 1;
+  opacity: 1;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=100);
+  filter: alpha(opacity=100);
+}
+li.call-control:hover .tooltip {
+  display: inline-block;
+  -moz-opacity: 0.95;
+  -khtml-opacity: 0.95;
+  -webkit-opacity: 0.95;
+  opacity: 0.95;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=95);
+  filter: alpha(opacity=95);
+}
+/* CSS for high-resolution devices */
+@media only screen and (-Webkit-min-device-pixel-ratio: 1.5), only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min-device-pixel-ratio: 1.5) {
+  li.call-control a.mute {
+    background-image: url('../images/icons/toolbar-icon-mute@2x.png');
+  }
+  li.call-control a.mute.muted {
+    background-image: url('../images/icons/toolbar-icon-mute-enabled@2x.png');
+  }
+  li.call-control a.video {
+    background-image: url('../images/icons/toolbar-icon-video@2x.png');
+  }
+  li.call-control a.video.enabled {
+    background-image: url('../images/icons/toolbar-icon-video-enabled@2x.png');
+  }
+  li.call-control a.leave {
+    background-image: url('../images/icons/toolbar-icon-leave@2x.png');
+  }
+  li.call-control a.accept {
+    background-image: url('../images/icons/toolbar-icon-accept@2x.png');
+  }
+}
+
+/*---------------------------------------------------
+    LESS Elements 0.9
+  ---------------------------------------------------
+    A set of useful LESS mixins
+    More info at: http://lesselements.com
+  ---------------------------------------------------*/
 
