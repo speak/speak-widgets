@@ -97,10 +97,8 @@ var Avatar = React.createClass({
     if (item.muted && this.props.simple) {
       muted_badge = <span className="badge muted animated fadeIn"></span>
     }
-    if (item.default_avatar_path) {
-      placeholder = <img ref="placeholder" style={hidden} className="default-avatar" onDragStart={this.preventDrag} src={'images' + item.default_avatar_path} />;
-    }
     if (item.avatars) {
+      placeholder = <img ref="placeholder" style={hidden} className="default-avatar" onDragStart={this.preventDrag} src={item.avatars.default} />;
       gravatar = <img ref="avatar" style={this.state.gravatar_hidden ? hidden : null} onLoad={this.avatarLoaded} onError={this.showPlaceholder} className="gravatar" onDragStart={this.preventDrag} src={this.state.url} />;
     }
     if (!this.props.simple) {
