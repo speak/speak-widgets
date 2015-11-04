@@ -170,6 +170,10 @@ li.call-control a {
   opacity: 0.8;
   -ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=80);
   filter: alpha(opacity=80);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 li.call-control a.disabled {
   -moz-opacity: 0.5;
@@ -182,7 +186,7 @@ li.call-control a.disabled {
 li.call-control a.mute {
   background-image: url('../images/icons/toolbar-icon-mute.png');
 }
-li.call-control a.mute.muted {
+li.call-control a.mute.enabled {
   background-image: url('../images/icons/toolbar-icon-mute-enabled.png');
 }
 li.call-control a.video {
@@ -242,7 +246,7 @@ li.call-control:hover .tooltip {
   li.call-control a.mute {
     background-image: url('../images/icons/toolbar-icon-mute@2x.png');
   }
-  li.call-control a.mute.muted {
+  li.call-control a.mute.enabled {
     background-image: url('../images/icons/toolbar-icon-mute-enabled@2x.png');
   }
   li.call-control a.video {
