@@ -32,10 +32,10 @@ var MuteButton = React.createClass({
       tooltip = <span className="tooltip">{this.getTooltip()}<i className="triangle"></i></span>;
     }
 
-    return <span>
-      <a className={classes} onClick={this.props.onClick}></a>
+    return <li {...this.props} className="call-control">
+      <a className={classes}></a>
       {tooltip}
-    </span>;
+    </li>;
   }
 });
 

@@ -1,0 +1,132 @@
+@import "elements.css.less";
+
+
+li.call-control {
+  padding: 0 5px;
+  list-style: none;
+  display: inline-block;
+  box-sizing: border-box;
+  text-align: center;
+  width: 20%;
+  height: 100%;
+  
+  .tooltip {
+    transform: translateX(-50%);
+    position: relative;
+    top: -2px;
+    left: 20px;
+    background: #fff;
+    padding: 10px;
+    font-size: 12px;
+    line-height: 1;
+    min-height: 0;
+    display: none;
+    white-space: nowrap;
+    .rounded(4px);
+    
+    .triangle {
+      display: block;
+      width: 10px;
+      height: 17px;
+      position: absolute;
+      overflow: hidden;
+      top: -12px;
+      left: 50%;
+      margin-left: -6px;
+      background: url('../images/tooltip-arrow.png');
+      background-size: 10px 17px;
+      background-repeat: no-repeat;
+      background-position: center right;
+      .rotation(90deg);
+    }
+  }
+
+  a {
+    -webkit-app-region: no-drag;
+    background-color: transparent;
+    background-size: 20px 20px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 35px;
+    height: 100%;
+    cursor: default;
+    display: inline-block;
+    .opacity(.8);
+    
+    &.disabled {
+      .opacity(0.5);
+    }
+    
+    &.mute {
+      background-image: url('../images/icons/toolbar-icon-mute.png');
+      &.muted { background-image: url('../images/icons/toolbar-icon-mute-enabled.png'); }
+    }
+    
+    &.video {
+      background-image: url('../images/icons/toolbar-icon-video.png');
+      &.enabled { background-image: url('../images/icons/toolbar-icon-video-enabled.png'); }
+    }
+  
+    &.add-people {
+      background-image: url('../images/icons/toolbar-add-person@2x.png');
+      &.enabled { background-image: url('../images/icons/toolbar-add-person-enabled@2x.png'); }
+    }
+    
+    &.screen {
+      background-image: url('../images/icons/toolbar-icon-screen@2x.png');
+      &.enabled { background-image: url('../images/icons/toolbar-icon-screen-enabled@2x.png'); }
+    }
+    
+    &.leave {
+      background-image: url('../images/icons/toolbar-icon-leave.png');
+    }
+    
+    &.accept {
+      background-image: url('../images/icons/toolbar-icon-accept.png');
+    }
+  }
+}
+
+li.call-control:hover {
+  background: #000;
+  
+  a {
+    .scale(1.1);
+    transition: transform 100ms ease-in-out;
+  }
+  
+  a:not(.disabled) {
+    .opacity(1);
+  }
+  
+  .tooltip {
+    display: inline-block;
+    .opacity(0.95);
+  }
+}
+
+/* CSS for high-resolution devices */
+@media only screen and (-Webkit-min-device-pixel-ratio: 1.5),
+only screen and (-moz-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min-device-pixel-ratio: 1.5) {
+  li.call-control a {
+    &.mute {
+      background-image: url('../images/icons/toolbar-icon-mute@2x.png');
+      &.muted { background-image: url('../images/icons/toolbar-icon-mute-enabled@2x.png'); }
+    }
+    
+    &.video {
+      background-image: url('../images/icons/toolbar-icon-video@2x.png');
+      &.enabled { background-image: url('../images/icons/toolbar-icon-video-enabled@2x.png'); }
+    }
+    
+    &.leave {
+      background-image: url('../images/icons/toolbar-icon-leave@2x.png');
+    }
+    
+    &.accept {
+      background-image: url('../images/icons/toolbar-icon-accept@2x.png');
+    }
+  }
+}

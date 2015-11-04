@@ -24,10 +24,10 @@ var LeaveButton = React.createClass({
       tooltip = <span className="tooltip">Leave Call<i className="triangle"></i></span>;
     }
 
-    return <span>
-      <a className={classes} onClick={this.handleClick}></a>
+    return <li {...this.props} className="call-control">
+      <a className={classes}></a>
       {tooltip}
-    </span>;
+    </li>;
   }
 });
 
