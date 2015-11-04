@@ -14,7 +14,7 @@ var ScreenButton = React.createClass({
   
   getTooltip: function() {
     if (this.props.disabled) return "Screen Unavailable";
-    if (this.props.user.publishing_screen) return "Unshare Screen";
+    if (this.props.enabled) return "Unshare Screen";
     return "Share Screen";
   },
   

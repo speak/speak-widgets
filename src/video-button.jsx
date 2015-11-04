@@ -14,7 +14,7 @@ var VideoButton = React.createClass({
   
   getTooltip: function() {
     if (this.props.disabled) return "No Cameras";
-    if (this.props.user.publishing_video) return "Stop Video";
+    if (this.props.enabled) return "Stop Video";
     return "Start Video";
   },
   
