@@ -25,7 +25,7 @@ var LeaveButton = React.createClass({
     }
 
     return <span>
-      <a className={classes}></a>
+      <a className={classes} {...this.props}></a>
       {tooltip}
     </span>;
   }
