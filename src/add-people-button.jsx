@@ -25,10 +25,10 @@ var AddPeopleButton = React.createClass({
       tooltip = <span className="tooltip">Add People<i className="triangle"></i></span>
     }
 
-    return <li {...this.props} className="call-control">
+    return <span>
       <a className={classes}></a>
       {tooltip}
-    </li>;
+    </span>;
   }
 });
 
